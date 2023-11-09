@@ -7,10 +7,10 @@ public class Main
     public static void main(String[] args) {
 
         //1
-        ArrayPrimeNumbers arrayPrimeNumbers = new ArrayPrimeNumbers();
+        PrimeNumbersList arrayPrimeNumbers = new PrimeNumbersList();
         arrayPrimeNumbers.run();
         //2
-        ArrayLuckyNumbers arrayLuckyNumbers = new ArrayLuckyNumbers();
+        LuckyNumbersList arrayLuckyNumbers = new LuckyNumbersList();
         arrayLuckyNumbers.run();
         //3
         RandomNumberToWord randomNumberToWord = new RandomNumberToWord();
@@ -22,18 +22,17 @@ public class Main
         CalculateTheExpression calculateTheExpression = new CalculateTheExpression();
         calculateTheExpression.run();
         //6
-        ArrayFibonacciNumber arrayFibonacciNumber = new ArrayFibonacciNumber();
+        FibonacciNumberList arrayFibonacciNumber = new FibonacciNumberList();
         arrayFibonacciNumber.run();
         //7
-        ArrayPalindromeNumbers arrayPalindromeNumbers = new ArrayPalindromeNumbers();
+        PalindromeNumbersList arrayPalindromeNumbers = new PalindromeNumbersList();
         arrayPalindromeNumbers.run();
         //8
-        ArrayFractionalPart arrayFractionalPart = new ArrayFractionalPart();
+        FractionalPartList arrayFractionalPart = new FractionalPartList();
         arrayFractionalPart.run();
         //9
         PascalTriangle pascalTriangle = new PascalTriangle();
         pascalTriangle.run();
 
     }
-
 }

@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
 
-public class ArrayFractionalPart implements CanRun{
+public class FractionalPartList implements CanRun{
     @Override
     public void run() {
         System.out.println("Задание №8");
@@ -12,13 +12,11 @@ public class ArrayFractionalPart implements CanRun{
         int m,n,result;
         double mDouble, nDouble, resultDouble,FractionalPart;
 
+        RandomNumbersList randomNumbersList = new RandomNumbersList();
         Scanner scanner = new Scanner(System.in);
         List<Integer> linkedList = new LinkedList<>();
-        System.out.println("Введите числа списка (для выхода нажмите q): ");
-        while (scanner.hasNextInt()) {
-            linkedList.add(scanner.nextInt());
-        }
 
+        linkedList.addAll(randomNumbersList.create()); //все числа случайного списка становится числами списка linkedList
 
         for (int i =0; i<linkedList.size(); i++){
             int number = linkedList.get(i);

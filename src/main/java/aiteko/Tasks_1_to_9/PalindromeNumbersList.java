@@ -4,17 +4,16 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
 
-public class ArrayPalindromeNumbers implements CanRun{
+public class PalindromeNumbersList implements CanRun{
     @Override
     public void run() {
         System.out.println("Задание №7");
 
+        RandomNumbersList randomNumbersList = new RandomNumbersList();
         Scanner scanner = new Scanner(System.in);
         List<Integer> linkedList = new LinkedList<>();
-        System.out.println("Введите числа списка (для выхода нажмите q): ");
-        while (scanner.hasNextInt()) {
-            linkedList.add(scanner.nextInt());
-        }
+
+        linkedList.addAll(randomNumbersList.create()); //все числа случайного списка становится числами списка linkedList
 
         System.out.print("Числа-полиндромы списка: ");
         for (int number : linkedList){

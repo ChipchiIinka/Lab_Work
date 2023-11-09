@@ -2,19 +2,16 @@ package aiteko.Tasks_1_to_9;
 
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Scanner;
 
-public class ArrayFibonacciNumber implements CanRun{
+public class FibonacciNumberList implements CanRun{
     @Override
     public void run() {
         System.out.println("Задание №6");
 
-        Scanner scanner = new Scanner(System.in);
+        RandomNumbersList randomNumbersList = new RandomNumbersList();
         List<Integer> linkedList = new LinkedList<>();
-        System.out.println("Введите числа списка (для выхода нажмите q): ");
-        while (scanner.hasNextInt()) {
-            linkedList.add(scanner.nextInt());
-        }
+
+        linkedList.addAll(randomNumbersList.create()); //все числа случайного списка становится числами списка linkedList
 
         System.out.print("Числа ряда Фибоначи в списке: ");
         for (int number: linkedList) {

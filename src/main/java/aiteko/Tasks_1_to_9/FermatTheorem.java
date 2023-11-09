@@ -49,9 +49,3 @@ public class FermatTheorem implements CanRun {
         return true; // Решения ненайдено
     }
 }
-
-
-
-
-
-

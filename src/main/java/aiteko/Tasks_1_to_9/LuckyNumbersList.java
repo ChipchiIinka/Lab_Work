@@ -4,19 +4,16 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
 
-public class ArrayLuckyNumbers implements CanRun {
+public class LuckyNumbersList implements CanRun {
     @Override
     public void run() {
         System.out.println("Задание №2");
 
-
+        RandomNumbersList randomNumbersList = new RandomNumbersList();
         Scanner scanner = new Scanner(System.in);
         List<Integer> numbers = new LinkedList<>();
-        System.out.println("Введите числа списка (для выхода нажмите q): ");
-        while (scanner.hasNextInt()) {
-            numbers.add(scanner.nextInt());
-        }
 
+        numbers.addAll(randomNumbersList.create()); //все числа случайного списка становится числами списка numbers
 
         int maxNumber = numbers.get(0);
         for (int number : numbers) { //нахождение макс числа списка

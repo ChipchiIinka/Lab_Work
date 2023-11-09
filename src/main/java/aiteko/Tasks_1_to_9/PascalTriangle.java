@@ -1,15 +1,14 @@
 package aiteko.Tasks_1_to_9;
 
-import java.util.Scanner;
+import java.util.Random;
 
 public class PascalTriangle implements CanRun{
     @Override
     public void run() {
         System.out.println("Задание №9");
-        Scanner scanner = new Scanner(System.in);
 
-        System.out.println("введите число по которому построется треугольник паскаля");
-        int number = scanner.nextInt();
+        Random random = new Random();
+        int number = random.nextInt( 20+ 1);
 
         if (number == 0) {
             System.out.println("\t" + 1);
