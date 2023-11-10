@@ -8,7 +8,7 @@ public class PascalTriangle implements CanRun{
         System.out.println("Задание №9");
 
         Random random = new Random();
-        int number = random.nextInt( 20+ 1);
+        int number = random.nextInt( 20+1);
 
         if (number == 0) {
             System.out.println("\t" + 1);

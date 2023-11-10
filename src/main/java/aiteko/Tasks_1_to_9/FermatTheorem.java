@@ -2,7 +2,7 @@ package aiteko.Tasks_1_to_9;
 
 public class FermatTheorem implements CanRun {
     private int n; //Степень чисел
-    private int range = 100; //Диапазон для поиска решений
+    private final int range = 100; //Диапазон для поиска решений
     private boolean IsSolutionTrue;
 
     @Override

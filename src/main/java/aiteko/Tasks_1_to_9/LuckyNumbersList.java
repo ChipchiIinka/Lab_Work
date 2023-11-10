@@ -2,7 +2,6 @@ package aiteko.Tasks_1_to_9;
 
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Scanner;
 
 public class LuckyNumbersList implements CanRun {
     @Override
@@ -10,10 +9,7 @@ public class LuckyNumbersList implements CanRun {
         System.out.println("Задание №2");
 
         RandomNumbersList randomNumbersList = new RandomNumbersList();
-        Scanner scanner = new Scanner(System.in);
-        List<Integer> numbers = new LinkedList<>();
-
-        numbers.addAll(randomNumbersList.create()); //все числа случайного списка становится числами списка numbers
+        List<Integer> numbers = randomNumbersList.create();
 
         int maxNumber = numbers.get(0);
         for (int number : numbers) { //нахождение макс числа списка
@@ -52,7 +48,7 @@ public class LuckyNumbersList implements CanRun {
         for (int number : numbers) {
             for (int LuckyNumber : luckyNumbers) {
                 if (LuckyNumber == number) {
-                    System.out.print(number + "; ");
+                    System.out.printf("%d; ", number);
                 }
             }
         }

@@ -9,15 +9,13 @@ public class PrimeNumbersList implements CanRun {
         System.out.println("Задание №1");
 
         RandomNumbersList randomNumbersList = new RandomNumbersList();
-        List<Integer> linkedList = new LinkedList<>();
-
-        linkedList.addAll(randomNumbersList.create()); //все числа случайного списка становится числами списка linkedList
+        List<Integer> linkedList = randomNumbersList.create();
 
         System.out.print("Простые числа списка: ");
         for (int number: linkedList)
         {
             if (isPrime(number)) {
-                System.out.print(number + "; ");
+                System.out.printf("%d; ", number);
             }
         }
         System.out.println("\n");
@@ -25,10 +23,10 @@ public class PrimeNumbersList implements CanRun {
 
     private boolean isPrime(int number)
     {
-        boolean ItIsPrime=true;
+        boolean itIsPrime=true;
         if (number <= 1) {
-            ItIsPrime=false;
-            if (ItIsPrime) {
+            itIsPrime=false;
+            if (itIsPrime) {
                 return true;
             } else {
                 return false;
@@ -37,15 +35,11 @@ public class PrimeNumbersList implements CanRun {
             for (int j = 2; j <= number / 2; j++)
             {
                 if ((number) % j == 0) {
-                    ItIsPrime=false;
+                    itIsPrime=false;
                     break;
                 }
             }
         }
-        if (ItIsPrime) {
-            return true;
-        }else {
-            return false;
-        }
+        return itIsPrime;
     }
 }
